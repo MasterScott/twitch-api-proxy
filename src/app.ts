@@ -23,7 +23,7 @@ const rateLimiter = new RateLimit({
 
 app.use(rateLimiter);
 
-app.use("/api/v1", apiRouter);
+app.use("/v1", apiRouter);
 
 app.listen(port, (err) => {
   if (err) {
