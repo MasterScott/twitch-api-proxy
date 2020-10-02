@@ -13,6 +13,8 @@ class ChannelController {
 
     const channelInfo = await twitchService.getChannelInfo(channelIdOrName);
 
+    res.set("Access-Control-Allow-Origin", "*");
+
     if (channelInfo == null) {
       res.status(404).json(NOT_FOUND_RESPONSE);
       return;
